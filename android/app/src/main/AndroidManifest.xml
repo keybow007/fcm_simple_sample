@@ -3,18 +3,17 @@
         android:label="fcm_cloud_functions_sample"
         android:icon="@mipmap/launcher_icon"
         android:usesCleartextTraffic="true">
-       <!--TODO  https://firebase.flutter.dev/docs/installation/android#enabling-use-of-firebase-emulator-suite-->
-       <!-- [START fcm_default_icon] -->
+       <!-- [START FCMの通知アイコンの設定（白ベースの透過画像でないとちゃんと表示されない] -->
        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
             See README(https://goo.gl/l4GJaQ) for more. -->
        <meta-data
            android:name="com.google.firebase.messaging.default_notification_icon"
            android:resource="@drawable/no_bg_icon" />
-       <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+       <!-- FCMの通知アイコンの背景色を変えたい場合
             notification message. See README(https://goo.gl/6BKBk7) for more. -->
-       <!--<meta-data
+       <meta-data
            android:name="com.google.firebase.messaging.default_notification_color"
-           android:resource="@color/colorAccent" /> -->
+           android:resource="@color/notification_bg_color" />
        <!-- [END fcm_default_icon] -->
        <activity
             android:name=".MainActivity"
